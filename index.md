@@ -3,16 +3,19 @@
 layout: home
 
 hero:
-  name: "Bushel Docs"
-  text: "Bushel Docs"
-  tagline: My great project tagline
+  name: "Bushel API"
+  text: "Developer Docs"
+  tagline: Welcome to the official developer documentation for Bushel! Here you'll find everything you need to manage your machines, libraries, and images with ease.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get the App
+      link: /guide/getting-started
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: REST API
+      link: /rest
+    - theme: alt
+      text: CLI
+      link: /cli
 
 features:
   - title: Feature A
@@ -23,3 +26,10 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<!-- Explore the guide to streamline your workflow and take full advantage of Bushel CLI’s features:
+
+- [Getting Started](/guide/getting-started)
+- [Library](/guide/library)
+- [Machine](/guide/machine)
+- [Images](/guide/images)
+- [FAQ](/guide/faq) -->
