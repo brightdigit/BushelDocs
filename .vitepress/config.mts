@@ -4,9 +4,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Bushel API",
   description: "Developer Docs",
-  // rewrites : {
-  //   '/Swift/:scheme.docarchive' : `Swift/:scheme.doccarchive/index.html`
-  // },
+  rewrites: {
+    //'swift-docc/BushelFoundation/:path*': '/swift-docc/BushelFoundation/documentation/:path*'
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
