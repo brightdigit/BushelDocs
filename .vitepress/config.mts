@@ -4,14 +4,18 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Bushel API",
   description: "Developer Docs",
+  // rewrites : {
+  //   '/Swift/:scheme.docarchive' : `Swift/:scheme.doccarchive/index.html`
+  // },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
       { text: 'REST API', link: '/rest' },
-      { text: 'CLI', link: '/cli' }
+      { text: 'CLI', link: '/cli' },
+      { text: 'Swift DocC', link: '/swift-docc/BushelFoundation/index.html' },
+      { text: 'Get Bushel', link: 'https://getbushel.app'}
     ],
-
     sidebar: [
       { 
         text: "REST API",
