@@ -1,22 +1,8 @@
 import { defineConfig } from 'vitepress'
 import * as fs from 'fs';
+import doccData from '../docc.data';
 
-
-const baseURL =
-  process.env.ENVIRONMENT=== 'production'
-    ? 'https://docs.getbushel.app'
-    : 'http://localhost:3000'
-    
-const modules = fs.readdirSync("public/swift-docc").filter( (name) => {
-  return name.toLocaleLowerCase().startsWith("bushel")
-}).map((name) => {
-  const lowerCase = name.toLocaleLowerCase()
-  return { 
-    text: name, 
-    link: `${baseURL}/swift-docc/${name}/documentation/${lowerCase}/`, 
-    target: "_self"
-  }
-})
+const modules = doccData.load()
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -31,7 +17,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'REST API', link: '/rest' },
       { text: 'CLI', link: '/cli' },
-      { text: 'Swift DocC', link: `${baseURL}/swift-docc/BushelFoundation/documentation/bushelfoundation`, target: "_self"},
+      { text: 'Swift DocC', link: '/docc'},
       { text: 'Get Bushel', link: 'https://getbushel.app'}
     ],
     sidebar: [
