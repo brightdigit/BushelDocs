@@ -54,10 +54,11 @@ jobs:
           workflow_conclusion: success   
       - name: Decompress Archive
         run: |
-          mkdir -p public/swift-docc
-          tar -xf BushelKit.doccarchive.tar -C public/swift-docc
+          mkdir -p public
+          tar -xf BushelKit.doccarchive.tar -C public
+          mv public/BushelKit.doccarchive public/swift-docc
       - name: Build with VitePress
-        run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
+        run: npm run docs:production # or pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

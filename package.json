@@ -2,7 +2,8 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "docs:production": "cross-env ENVIRONMENT=production vitepress build"
   },
   "devDependencies": {
     "@types/node": "^22.10.1",

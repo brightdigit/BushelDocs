@@ -5,7 +5,7 @@ const baseURL =
     ? 'https://docs.getbushel.app'
     : 'http://localhost:3000'
     
-const modules = fs.readdirSync("public/swift-docc").filter( (name) => {
+const modules = fs.readdirSync("public/swift-docc/documentation").filter( (name) => {
   return name.toLocaleLowerCase().startsWith("bushel")
 }).map((name) => {
   const lowerCase = name.toLocaleLowerCase()
