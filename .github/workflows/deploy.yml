@@ -45,6 +45,13 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: npm ci # or pnpm install / yarn install / bun install
+      - uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }}
+          workflow: DocC.yml
+          name: artifact
+          repo: brightdigit/BushelKit
+          workflow_conclusion: success        
       - name: Build with VitePress
         run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
