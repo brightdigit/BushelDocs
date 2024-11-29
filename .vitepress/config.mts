@@ -1,11 +1,16 @@
 import { defineConfig } from 'vitepress'
 
+const baseURL =
+  process.env.ENVIRONMENT=== 'production'
+    ? 'https://docs.getbushel.app'
+    : 'http://localhost:3000'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Bushel API",
   description: "Developer Docs",
-  rewrites: {
-    //'swift-docc/BushelFoundation/:path*': '/swift-docc/BushelFoundation/documentation/:path*'
+  vite : {
+    assetsInclude : ["**/*.json"]
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -13,7 +18,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'REST API', link: '/rest' },
       { text: 'CLI', link: '/cli' },
-      { text: 'Swift DocC', link: '/swift-docc/BushelFoundation/index.html' },
+      { text: 'Swift DocC', link: `${baseURL}/swift-docc/BushelFoundation/documentation/bushelfoundation`, target: "_self"},
       { text: 'Get Bushel', link: 'https://getbushel.app'}
     ],
     sidebar: [
