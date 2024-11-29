@@ -53,7 +53,9 @@ jobs:
           repo: brightdigit/BushelKit
           workflow_conclusion: success   
       - name: Decompress Archive
-        run: tar -xf BushelKit.doccarchive.tar -C public/swift-docc
+        run: |
+          mkdir -p public/swift-docc
+          tar -xf BushelKit.doccarchive.tar -C public/swift-docc
       - name: Build with VitePress
         run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
