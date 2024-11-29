@@ -11,7 +11,7 @@ const modules = fs.readdirSync("public/swift-docc/documentation").filter( (name)
   const lowerCase = name.toLocaleLowerCase()
   return { 
     text: name, 
-    link: `${baseURL}/swift-docc/${name}/documentation/${lowerCase}/`, 
+    link: `${baseURL}/swift-docc/documentation/${lowerCase}/`, 
     target: "_self"
   }
 })
