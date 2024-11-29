@@ -51,7 +51,11 @@ jobs:
           workflow: DocC.yml
           name: artifact
           repo: brightdigit/BushelKit
-          workflow_conclusion: success        
+          workflow_conclusion: success   
+      - name: Decompress Archive
+        run: |
+          ls .
+          tar -xf BushelKit.docarchive.tar
       - name: Build with VitePress
         run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
