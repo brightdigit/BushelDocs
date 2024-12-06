@@ -11,6 +11,7 @@ export default defineConfig({
   vite : {
     assetsInclude : ["**/*.json"]
   },
+  cleanUrls : true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
